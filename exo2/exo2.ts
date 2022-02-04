@@ -7,7 +7,7 @@ interface Administrateur {
   password: string;
 }
 
-type UtilisateurAnonymeUtilitaire = Partial<Pick<Administrateur, 'nom'>> &
+type Anonyme = Partial<Pick<Administrateur, 'nom'>> &
   Required<Pick<Administrateur, 'ip'>>;
 
 interface UtilisateurAnonyme {
@@ -15,4 +15,4 @@ interface UtilisateurAnonyme {
   ip: string;
 }
 
-const test: UtilisateurAnonymeUtilitaire = { ip: 'test', nom: 'test' };
+const test: Anonyme = { ip: 'test', nom: 'test' };
